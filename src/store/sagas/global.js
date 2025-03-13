@@ -53,7 +53,7 @@ function* getExchangeInfo() {
 
     for (let i = 0; i < 10; i++) {
         try {
-            const {data: {symbols}} = yield call(axios.get, '/api/v3/exchangeInfo')
+            const {data: {symbols}} = yield call(axios.get, '/v3/exchangeInfo')
             return symbols
         } catch (err) {
             if (i < 2) {
@@ -93,6 +93,7 @@ export function* loadConfig(action) {
         appTheme = defaultTheme;
 
     } catch (e) {
+        console.error("Lỗi khi gọi /config/web/v1:", e);
         i18n.changeLanguage(defaultConfigs?.defaultLanguage)
         appTheme = defaultConfigs?.defaultTheme;
         yield put(actions.setExchangeConfigs(defaultConfigs));
@@ -132,6 +133,7 @@ export function* loadConfig(action) {
         yield put(actions.setActivePair(lastActivePair || symbols[0]));
 
     } catch (e) {
+        console.error("Set error", e);
         yield put(actions.setError(true))
         return yield put(actions.setLoading(false));
     }

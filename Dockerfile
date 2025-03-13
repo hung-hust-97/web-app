@@ -1,9 +1,9 @@
-FROM node:lts-gallium AS build
+FROM node:18 AS build
 COPY . /web-app
 WORKDIR /web-app
 ENV NODE_ENV production
 RUN yarn cache clean
-RUN yarn install --immutable
+RUN yarn install
 ARG GENERATE_SOURCEMAP='false'
 ENV GENERATE_SOURCEMAP $GENERATE_SOURCEMAP
 RUN yarn build
