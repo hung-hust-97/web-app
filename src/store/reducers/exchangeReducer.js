@@ -45,11 +45,12 @@ const exchangeReducer = (state = initialState, action) => {
         case actionTypes.SET_ACTIVE_PAIR:
             return {
                 ...state,
-                activePair: {
-                    ...state.activePair,
-                    ...action.pair,
-                    name: action.pair.baseAsset + "/" + action.pair.quoteAsset
-                },
+                //loi tai day - Set base asset
+                // activePair: {
+                //     ...state.activePair,
+                //     ...action.pair,
+                //     name: action.pair.baseAsset + "/" + action.pair.quoteAsset
+                // },
                 activePairOrders: {
                     ...state.activePairOrders,
                     bestBuyPrice: 0,

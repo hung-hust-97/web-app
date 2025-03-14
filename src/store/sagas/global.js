@@ -80,17 +80,23 @@ export function* loadConfig(action) {
     const lastPrice = {};
 
     try {
-        const {
-            data: {
-                defaultTheme,
-                language,
-                ...configs
-            }
-        } = yield call(axios.get, '/config/web/v1')
+        // const {
+        //     data: {
+        //         defaultTheme,
+        //         language,
+        //         ...configs
+        //     }
+        // } = yield call(axios.get, '/config/web/v1')
 
-        yield put(actions.setExchangeConfigs(configs));
-        i18n.changeLanguage(language)
-        appTheme = defaultTheme;
+        // yield put(actions.setExchangeConfigs(configs));
+        // i18n.changeLanguage(language)
+        // appTheme = defaultTheme;
+
+
+        
+        i18n.changeLanguage(defaultConfigs?.defaultLanguage)
+        appTheme = defaultConfigs?.defaultTheme;
+        yield put(actions.setExchangeConfigs(defaultConfigs));
 
     } catch (e) {
         console.error("Lỗi khi gọi /config/web/v1:", e);
