@@ -1,7 +1,6 @@
-version: "3.8"
 services:
   web-app:
-    image: ghcr.io/opexdev/web-app
+    image: ghcr.io/opexdev/web-app:dev
     environment:
       - ENV=$WEB_APP_ENV
       - APP_TITLE=$WEB_APP_TITLE
@@ -18,10 +17,10 @@ services:
       - CALENDAR_TYPE=$WEB_APP_CALENDAR_TYPE
       - MOBILE_URL=$WEB_APP_MOBILE_URL
     networks:
-      - default
+      - core_default
     deploy:
       restart_policy:
         condition: on-failure
 networks:
-  default:
-    driver: bridge
+  core_default:
+    external: true
