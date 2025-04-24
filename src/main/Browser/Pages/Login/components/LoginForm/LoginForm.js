@@ -65,11 +65,13 @@ const LoginForm = () => {
             return setLoginError(t("login.emptyCredentialError"));
         }
 
-        if (!validateEmail(credential.username) || credential.password.length < 4) {
+        // if (!validateEmail(credential.username) || credential.password.length < 4) {
+        if (!validateEmail(credential.username) || credential.password.length < 1) {
             return setLoginError(t("login.inputError"));
         }
 
-        if (needOTP && credential.otp.length < 6) {
+        // if (needOTP && credential.otp.length < 6) {
+        if (needOTP && credential.otp.length < 1) {
             setLoginError(t("login.otpLength"));
             setLoading(false);
             return;

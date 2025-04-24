@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>}
                 </div>
                 <div className={`column jc-center ai-center`}>
-                    <img src={toAbsoluteUrl('/assets/logo/logo.svg')} alt={t("title")} title={t("title")}
+                    <img src={toAbsoluteUrl('/assets/logo/logo-cexchange.svg')} alt={t("title")} title={t("title")}
                          className={`img-lg-plus mb-1`}/>
                     <span className={`mt-1`}>{packageJson.version}</span>
                 </div>

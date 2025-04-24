@@ -10,7 +10,8 @@ const MostIncreasedPrice = ({mostIncreasedPrice}) => {
     const {t} = useTranslation();
 
     return (
-        <div className={`column border-bottom`}>
+        <div className={`column border-bottom width-30`}
+        style={{ borderBottom: '1px solid #FF8C00' }}>
             <span className={`${classes.title} text-orange`}>{t("MarketView.mostIncreased")}</span>
             <div className={`row jc-between ai-center`}>
                 <div className={`row jc-center ai-center`}>

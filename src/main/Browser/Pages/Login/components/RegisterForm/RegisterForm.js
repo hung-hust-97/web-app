@@ -13,7 +13,7 @@ import {setVerifyEmailLockInitiate} from "../../../../../../store/actions";
 import {useDispatch, useSelector} from "react-redux";
 import {Buffer} from 'buffer';
 
-const RegisterForm = () => {
+const RegisterForm = ({ email }) => {
     const {t} = useTranslation();
     const dispatch = useDispatch();
     const verifyEmailLock = useSelector((state) => state.exchange.verifyEmailLock)
@@ -31,7 +31,7 @@ const RegisterForm = () => {
     const [userData, setUserData] = useState({
         firstName: {value: "", error: []},
         lastName: {value: "", error: []},
-        email: {value: "", error: []},
+        email: { value: email || "", error: [] },
         captchaAnswer: {value: "", error: []},
         password: {value: "", error: []},
         confirmPassword: {value: "", error: []},

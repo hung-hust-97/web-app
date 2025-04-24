@@ -1,5 +1,5 @@
 {
-  "title": "OPEX",
+  "title": "C-EXCHANGE | Cryptocurrency Exchange for Bitcoin, Ethereum & Altcoins",
   "signIn": "Sign In",
   "signUp": "Sign Up",
   "signOut": "Sign Out",
@@ -173,7 +173,8 @@
     "fa": "فارسی",
     "en": "English",
     "ar": "عربي",
-    "uzb": "Oʻzbekcha"
+    "uzb": "Oʻzbekcha",
+    "vi": "Tiếng Việt"
   },
   "Theme": {
     "Light": "Light",
@@ -253,16 +254,16 @@
     "transactionsHistory": "Transactions History",
     "deposit": "Deposit",
     "withdraw": "Withdraw",
-    "withdrawHistory" : "Withdraw History",
-    "depositHistory" : "Deposit History",
+    "withdrawHistory": "Withdraw History",
+    "depositHistory": "Deposit History",
     "balance": "Balance",
     "balanceChange": "Balance Change",
-    "currency" : "Currency",
-    "category" : "Category",
-    "size" : "Size",
-    "period" : "Period",
-    "status" : "Status",
-    "ascendingByTime" : "Ascending By Time",
+    "currency": "Currency",
+    "category": "Category",
+    "size": "Size",
+    "period": "Period",
+    "status": "Status",
+    "ascendingByTime": "Ascending By Time",
     "page": "Page {{page}}",
     "amount": "Amount",
     "network": "Network",
@@ -286,44 +287,44 @@
     "DONE": "Done"
   },
   "TransactionHistory": {
-    "buyAndSell" : "Buy And Sell",
-    "buyAndSellTx" : "Buy And Sell History",
-    "withdrawTx" : "Withdraw History",
-    "depositTx" : "Deposit History",
-    "destAddress" : "Dest Address",
-    "txType" : "Transaction Type",
+    "buyAndSell": "Buy And Sell",
+    "buyAndSellTx": "Buy And Sell History",
+    "withdrawTx": "Withdraw History",
+    "depositTx": "Deposit History",
+    "destAddress": "Dest Address",
+    "txType": "Transaction Type",
     "coin": "Coin",
     "category": "Category",
     "size": "Number",
-    "period" : "Period",
-    "assetBlock" : "Reservation",
-    "assetUnBlocked" : "Asset UnBlocked",
-    "refund" : "Refund",
-    "startRefund" : "Start Refund",
-    "cancelExchange" : "Canceled",
-    "readyToExchange" : "Awaiting",
-    "decreaseWallet" : "Deduction",
-    "increaseWallet" : "Addition",
-    "balanceStatus" : "Balance Status",
-    "selfTrade" : "Self Trade",
-    "forFee" : "Fee for",
-    "ascendingByTime" : "Ascending By Time"
+    "period": "Period",
+    "assetBlock": "Reservation",
+    "assetUnBlocked": "Asset UnBlocked",
+    "refund": "Refund",
+    "startRefund": "Start Refund",
+    "cancelExchange": "Canceled",
+    "readyToExchange": "Awaiting",
+    "decreaseWallet": "Deduction",
+    "increaseWallet": "Addition",
+    "balanceStatus": "Balance Status",
+    "selfTrade": "Self Trade",
+    "forFee": "Fee for",
+    "ascendingByTime": "Ascending By Time"
   },
   "TransactionCategory": {
-    "TRADE" : "Trade",
-    "FEE" : "Fee",
-    "DEPOSIT" : "Deposit",
-    "WITHDRAW" : "Withdraw",
-    "SYSTEM" : "System",
+    "TRADE": "Trade",
+    "FEE": "Fee",
+    "DEPOSIT": "Deposit",
+    "WITHDRAW": "Withdraw",
+    "SYSTEM": "System",
 
-    "WITHDRAW_REQUEST" : "Withdraw Request",
-    "WITHDRAW_ACCEPT" : "Withdraw Accept",
-    "WITHDRAW_REJECT" : "Withdraw Reject",
+    "WITHDRAW_REQUEST": "Withdraw Request",
+    "WITHDRAW_ACCEPT": "Withdraw Accept",
+    "WITHDRAW_REJECT": "Withdraw Reject",
     "ORDER_CANCEL": "Cancel Order",
     "ORDER_CREATE": "Create Order",
     "ORDER_FINALIZED": "Refund",
-    "PURCHASE_FINALIZED" : "Purchase Finalized",
-    "ETC" : "Unknown"
+    "PURCHASE_FINALIZED": "Purchase Finalized",
+    "ETC": "Unknown"
   },
   "DepositWithdraw": {
     "title": "Deposit / Withdraw",
@@ -649,7 +650,7 @@
     "minInput": "{{name}} must be at least {{min}} characters.",
     "finishedWithError": "Error creating new user!",
     "back": "Back",
-    "description": "OPen source EXchange",
+    "description": "C-Exchange login page.",
     "OTPRequired": "A two-factor password (OTP) is required!",
     "otpLength": "The two-factor code must be 6 characters.",
     "refreshCaptcha": "Show captcha again!",
@@ -670,15 +671,21 @@
     "serverError": "Server error, please try again."
   },
   "Landing": {
-    "title": "Crypto Exchange Platform"
+    "title": "CMC ATI EXCHANGE"
   },
   "MarketTitle": {
     "content": "Designed specifically to meet your needs.",
     "advancedTrading": "Advanced Trading",
-    "easyTrading": "Easy Trading"
+    "easyTrading": "Easy Trading",
+    "discover": "Discover",
+    "theBlockchain": "the Blockchain",
+    "exploreTrading": "Explore Trading Opportunities – Register Today!",
+    "emailPhone": "Email/Phone number",
+    "register": "Register",
+    "frequentlyOrder": "Popular Cryptocurrency"
   },
   "Campaign": {
-    "hasCampaign":"false",
+    "hasCampaign": "false",
     "title": "",
     "content": "",
     "link": ""
@@ -700,7 +707,8 @@
     "volume": "Volume",
     "details": "Details",
     "trade": "Trade",
-    "marketCap": "Market Cap"
+    "marketCap": "Market Cap",
+    "tools": "Tool"
   },
   "MarketView": {
     "title": "Market Stats ( 24H )",
@@ -721,7 +729,7 @@
     "addCoin": "Add Coin",
     "demo": "Market Demo",
     "errorReport": "Error Report",
-    "copyright": "© {{year}} OPEX. All rights reserved."
+    "copyright": "© {{year}} C-EXCHANGE. All rights reserved."
   },
   "ImageInput": {
     "title": "",

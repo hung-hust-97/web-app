@@ -17,24 +17,28 @@ const GeneralInfo = () => {
         if (isLoading) return <Loading/>
         if (error) return <span className={`width-100`}><Error/></span>
         else return <>
+        
             <div className={`column jc-center ai-center width-33`}>
                 <div className={`${i18n.language !== "fa" ? 'row-reverse' : 'row'}`}>
-                    <span className={`fs-02`}>{data.activeUsers.toLocaleString()} </span>
                     <span className={`fs-0-9 ${i18n.language !== "fa" ? 'ml-025' : 'mr-025'}`}> + </span>
+                    <span className={`fs-02`}>{data.activeUsers.toLocaleString()} </span>
                 </div>
                 <span className={`fs-0-7`}>{t("GeneralInfo.activeUsers")}</span>
             </div>
+
             <div className={`column jc-center ai-center width-33`}>
                 <div className={`${i18n.language !== "fa" ? 'row-reverse' : 'row'}`}>
-                    <span className={`fs-02`}>{data.totalOrders.toLocaleString()} </span>
                     <span className={`fs-0-9 ${i18n.language !== "fa" ? 'ml-025' : 'mr-025'}`}> + </span>
+                    <span className={`fs-02`}>{data.totalOrders.toLocaleString()} </span>
                 </div>
                 <span className={`fs-0-7`}>{t("GeneralInfo.totalOrders")}</span>
             </div>
+
+
             <div className={`column jc-center ai-center width-33`}>
                 <div className={`${i18n.language !== "fa" ? 'row-reverse' : 'row'}`}>
-                    <span className={`fs-02`}>{data.totalTrades.toLocaleString()} </span>
                     <span className={`fs-0-9 ${i18n.language !== "fa" ? 'ml-025' : 'mr-025'}`}> + </span>
+                    <span className={`fs-02`}>{data.totalTrades.toLocaleString()} </span>
                 </div>
                 <span className={`fs-0-7`}>{t("GeneralInfo.totalTrades")}</span>
             </div>
@@ -42,7 +46,7 @@ const GeneralInfo = () => {
     }
 
     return (
-        <div className={`${classes.container} row jc-between ai-center card-bg card-border px-05 py-1`}>
+        <div className={`${classes.container} row jc-between ai-center px-05 py-1`}>
             {content()}
         </div>
     );

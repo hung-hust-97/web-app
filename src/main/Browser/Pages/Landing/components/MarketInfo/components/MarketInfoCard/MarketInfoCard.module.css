@@ -17,3 +17,15 @@
 .filter {
     filter: blur(4px);
 }
+
+.thisButton {
+    width: 80%;
+    background: var(--cardHeaderAlpha);
+    color: var(--textColor);
+    bottom: 0;
+}
+
+
+.thisButton:hover {
+    background-color: var(--container);
+}

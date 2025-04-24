@@ -136,13 +136,17 @@ const queryClient = new QueryClient()
 const container = document.getElementById('root');
 const root = createRoot(container);
 
+// Tắt bật swagger setting cho production 
 root.render(
     <Provider store={store}>
         {/*<StyleRoot>*/}
         <QueryClientProvider client={queryClient}>
             <Main baseURL={PUBLIC_URL}/>
             <Toast/>
-            <ReactQueryDevtools initialIsOpen={false}/>
+            {process.env.Node_ENV === "deverlopment"  && (
+                <ReactQueryDevtools initialIsOpen={false}/>
+            )}
+            {/* <ReactQueryDevtools initialIsOpen={false}/> */}
         </QueryClientProvider>
         {/*</StyleRoot>*/}
     </Provider>

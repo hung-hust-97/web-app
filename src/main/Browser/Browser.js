@@ -53,11 +53,11 @@ const Browser = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const meta = document.getElementsByTagName('meta')
-        document.title = title ? title : " ";
-        meta.description.content = description ? description : " "
-    }, [title, description])
+    // useEffect(() => {
+    //     const meta = document.getElementsByTagName('meta')
+    //     document.title = title ? title : " ";
+    //     meta.description.content = description ? description : " "
+    // }, [title, description])
 
     if (isLoading) return <FullWidthLoading/>
 

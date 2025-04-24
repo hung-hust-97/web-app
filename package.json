@@ -1,6 +1,6 @@
 {
   "name": "opex",
-  "version": "v1.0.12-beta.21",
+  "version": "v0.0.1-beta",
   "homepage": "",
   "private": true,
   "dependencies": {

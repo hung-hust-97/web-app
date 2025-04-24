@@ -10,7 +10,8 @@ const MostVolume = ({mostVolume}) => {
     const {t} = useTranslation();
 
     return (
-        <div className={`column`}>
+        <div className={`column border-bottom my-3 width-30` } 
+        style={{ borderBottom: '1px solid #FF8C00' }}>
             <span className={`${classes.title} text-orange`}>{t("MarketView.mostVolume")}</span>
             <div className={`row jc-between ai-center`}>
                 <div className={`row jc-center ai-center`}>
@@ -29,7 +30,7 @@ const MostVolume = ({mostVolume}) => {
                     </div>
 
                     {/*++ to do ++*/}
-                    {/*<span className={`${mostVolume?.change > 0 ? "text-green" : "text-red"} direction-ltr`}>{new BN(mostVolume?.change).toFormat(2)} %</span>*/}
+                    <span className={`${mostVolume?.change > 0 ? "text-green" : "text-red"} direction-ltr`}>{new BN(mostVolume?.change).toFormat(2)} %</span>
                 </div>
             </div>
         </div>

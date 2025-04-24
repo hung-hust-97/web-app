@@ -4,7 +4,8 @@ export const defaultConfigs = {
     "description": "Description text",
     "defaultLanguage": "en",
     "supportedLanguages": [
-        "en"
+        "en",
+        "vi"
     ],
     "defaultTheme": "DARK",
     "supportEmail": "supportEmail@gmail.com",

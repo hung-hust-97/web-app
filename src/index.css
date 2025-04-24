@@ -154,6 +154,7 @@ html, body {
 }
 
 :root {
+    --marketTitleContainer: #000;
     --menu: #ececec;
     --subMenu: #f2f2f2;
     --mainContent: #f6f6f6;
@@ -196,9 +197,10 @@ html, body {
 
 
 .dark {
+    --marketTitleContainer: #fff;
     --menu: #24242e;
     --subMenu: #24242e;
-    --mainContent: #383a59;
+    --mainContent: #24242C;
     --activeTitle: #11121552;
     --footer: #252531;
     --cardBody: #282a36;

@@ -94,11 +94,11 @@ const LayoutHeader = () => {
         <div className={`width-100 flex jc-center ai-center ${classes.container}`}>
             <div className={`${classes.content} width-90 height-100 row jc-center ai-center`}>
                 <Link to={RoutesName.Landing} className={`flex jc-start ai-center width-15`}>
-                    <img src={toAbsoluteUrl('/assets/logo/logo.svg')} alt={t("title")} title={t("title")} className={`img-lg-plus`}/>
+                    <img src={toAbsoluteUrl('/assets/logo/logo-cexchange.svg')} alt={t("title")} title={t("title")} className={`img-lg-plus`}/>
                 </Link>
                 <div className={`width-25`}>
                     <Routes>
-                        <Route path={RoutesName.Landing} element={<h2>{t("Landing.title")}</h2>}/>
+                        {/* <Route path={RoutesName.Landing} element={<h2>{t("Landing.title")}</h2>}/> */}
                         <Route path={RoutesName.EasyTrading} element={<h2>{t("MarketTitle.easyTrading")}</h2>}/>
                         <Route path={RoutesName.Commission} element={<h2>{t("commissions.title")}</h2>}/>
                         <Route path={RoutesName.AboutUs} element={<h2>{t("aboutUs.title")}</h2>}/>
@@ -134,7 +134,7 @@ const LayoutHeader = () => {
                 </div>
                 <div className={`column ai-end width-20`}>
                     {firstName === null ? (
-                        <Link to={Login} state={{from: location}} className="hover-text">
+                        <Link to={Login} state={{from: location, activeTab:0}} className="hover-text">
                             <p>{t("signIn")} | {t("signUp")}</p>
                         </Link>
                     ) : (

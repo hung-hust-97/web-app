@@ -1,16 +1,16 @@
 .container {
-    height: 55vh;
-    width: 90%
+  /* height: 55vh; */
+  width: 90%;
 }
 
 .header {
-    height: 15%;
+  height: 10vh;
 }
 
 .content {
-    height: 85%;
+  /* height: 85%; */
 }
 
 .thisLoading {
-    width: 5vw;
+  width: 5vw;
 }

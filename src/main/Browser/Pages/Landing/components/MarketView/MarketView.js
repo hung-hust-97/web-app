@@ -39,9 +39,11 @@ const MarketView = () => {
             <NullMarketStats interval={"24h"}/>
         </span>
         else return <>
-            <MostIncreasedPrice mostIncreasedPrice={mostIncreasedPrice}/>
-            <MostDecreasedPrice mostDecreasedPrice={mostDecreasedPrice}/>
-            <MostVolume mostVolume={mostVolume}/>
+           <div className="row jc-between ai-center">
+                <MostIncreasedPrice mostIncreasedPrice={mostIncreasedPrice} />
+                <MostDecreasedPrice mostDecreasedPrice={mostDecreasedPrice} />
+                <MostVolume mostVolume={mostVolume} />
+            </div>
         </>
     }
 

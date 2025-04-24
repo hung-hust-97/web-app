@@ -84,3 +84,79 @@
         opacity: 1;
     }
 }
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.marketTitleContainer {
+    color:  var(--marketTitleContainer);
+    width: 100%;
+    max-width: 750px; /* Make it slightly wider to match the design */
+    border-radius: 15px;
+    text-align: left;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.1; /* Adjust the line height for better spacing */
+}
+
+.subtitle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-top: 10px; /* Added top margin for spacing between the title and subtitle */
+    line-height: 1.1; /* Adjust line height for better spacing */
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #e4e9f2;
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+
+.input {
+    padding: 14px;
+    width: 80%;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    outline: none;
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 0.8rem;
+}
+
+.input:focus {
+    border-color: #4e73df;
+}
+
+.button {
+    padding: 12px 25px;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: #2e59b9;
+}
+
