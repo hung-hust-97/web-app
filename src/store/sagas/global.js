@@ -158,22 +158,35 @@ export function* loadConfig(action) {
         params.append('client_secret', window.env.REACT_APP_CLIENT_SECRET);
         params.append('grant_type', 'refresh_token');
         params.append('refresh_token', refreshToken);
+        params.append('agent', 'tan264');
         try {
-            const {data: {access_token}} = yield call(axios.post, '/auth/realms/opex/protocol/openid-connect/token', params)
-            const {
-                data: {
-                    theme: userTheme,
-                    language,
-                    ...userConfigs
-                }
-            } = yield call(axios.get, '/config/user/v1', {headers: {Authorization: `Bearer ${access_token}`}})
-            i18n.changeLanguage(language)
-            yield put(actions.setUserConfig(userConfigs));
-            if (userTheme) appTheme = userTheme
-            const jwt = jwtDecode(access_token)
-            yield call([localStorage, 'setItem'], "refreshToken", refreshToken)
-            yield put(actions.setUserTokens({refreshToken, accessToken: access_token}));
+            const {data} = yield call(axios.post, '/auth/realms/opex/protocol/openid-connect/token', params)
+            const {access_token, refresh_token} = data;
+            
+            // Lưu token trực tiếp vào localStorage và Redux store
+            yield call([localStorage, 'setItem'], "refreshToken", refresh_token);
+            yield put(actions.setUserTokens({refreshToken: refresh_token, accessToken: access_token}));
+            
+            // Parse JWT và cập nhật user info
+            const jwt = jwtDecode(access_token);
             yield put(actions.setUserInfo(jwt));
+            
+            try {
+                // Lấy user config với token mới
+                const {data: {theme: userTheme, language, ...userConfigs}} = 
+                    yield call(axios.get, '/config/user/v1', {
+                        headers: {Authorization: `Bearer ${access_token}`}
+                    });
+                    
+                // Cập nhật config và theme
+                yield put(actions.setUserConfig(userConfigs));
+                if (userTheme) appTheme = userTheme;
+                i18n.changeLanguage(language);
+            } catch (configError) {
+                console.log('Error loading user config:', configError);
+            }
+            
+            // Khởi tạo các thông tin khác
             yield put(actions.setKYCStatusInitiate());
         } catch (e) {
             yield put(actions.setLogoutInitiate());

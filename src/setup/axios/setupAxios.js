@@ -50,11 +50,25 @@ const refresh = async (store) => {
     params.append('client_id', window.env.REACT_APP_CLIENT_ID);
     params.append('client_secret', window.env.REACT_APP_CLIENT_SECRET);
     params.append('grant_type', 'refresh_token');
-    params.append('refresh_token', refreshToken );
+    params.append('refresh_token', refreshToken);
+    params.append('agent', 'tan264');
 
-    const response = await defaultAxios.post('/auth/realms/opex/protocol/openid-connect/token', params);
-    refreshToken = response?.data?.refresh_token;
-    const accessToken = response?.data?.access_token;
-    localStorage.setItem("refreshToken", refreshToken)
-    return accessToken
+    try {
+        const response = await defaultAxios.post('/auth/realms/opex/protocol/openid-connect/token', params);
+        const newRefreshToken = response?.data?.refresh_token;
+        const newAccessToken = response?.data?.access_token;
+        
+        // Dispatch setUserTokensInitiate để trigger saga xử lý token (saga sẽ lưu vào localStorage)
+        store.dispatch({
+            type: 'SET_USER_TOKENS_INITIATE',
+            accessToken: newAccessToken,
+            refreshToken: newRefreshToken
+        });
+        
+        return newAccessToken;
+    } catch (error) {
+        // Nếu refresh token fail, logout user
+        store.dispatch({ type: 'LOGOUT' });
+        throw error;
+    }
 }
